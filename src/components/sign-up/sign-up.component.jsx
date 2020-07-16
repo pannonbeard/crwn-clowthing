@@ -30,7 +30,7 @@ class SignUp extends Component {
       await createUserProfileDocument(user, { displayName });
       this.setState({ displayName: '', email: '', password: '', confirmPassword: '' })
     }catch(error){
-      console.log('THere was an error signing up')
+      console.log('THere was an error signing up', error.message)
     }
   }
 
